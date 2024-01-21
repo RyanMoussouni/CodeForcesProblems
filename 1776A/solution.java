@@ -36,7 +36,12 @@ public class Solution {
 	var array = readArray();
 
 	var diffs = computeDifference(array);
-	System.out.println(hasBeenWalked(diffs));
+
+	if (hasBeenWalked(diffs) {
+		System.out.println("YES"); 
+	} else {
+		System.out.println("NO");
+	}
     }
     
     private static int readLines() throws IOException {
