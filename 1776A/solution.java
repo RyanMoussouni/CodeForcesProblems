@@ -33,14 +33,17 @@ public class Solution {
         input = new BufferedReader(new InputStreamReader(System.in));
 
 	var nLines = readLines();
-	var array = readArray();
 
-	var diffs = computeDifference(array);
+	for (int=0; i<nLines; i++) {
+		var array = readArray();
 
-	if (hasBeenWalked(diffs) {
-		System.out.println("YES"); 
-	} else {
-		System.out.println("NO");
+		var diffs = computeDifference(array);
+
+		if (hasBeenWalked(diffs)) {
+			System.out.println("YES"); 
+		} else {
+			System.out.println("NO");
+		}
 	}
     }
     
