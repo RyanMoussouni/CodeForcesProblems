@@ -36,7 +36,7 @@ public class Solution {
 	var array = readArray();
 
 	var diffs = computeDifference(array);
-	return hasBeenWalked(diffs);
+	System.out.println(hasBeenWalked(diffs));
     }
     
     private static int readLines() {
