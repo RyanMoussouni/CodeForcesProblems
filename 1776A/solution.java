@@ -34,7 +34,7 @@ public class Solution {
 
 	var nLines = readLines();
 
-	for (int=0; i<nLines; i++) {
+	for (int i =0; i<nLines; i++) {
 		var array = readArray();
 
 		var diffs = computeDifference(array);
