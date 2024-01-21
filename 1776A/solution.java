@@ -74,7 +74,7 @@ public class Solution {
     private static boolean hasBeenWalked(List<Integer> arr) {
 	    var cpt = 0;
 	    for (var elapsedTime : arr) {
-		    if (elaspedTime >= 240 ) {
+		    if (elapsedTime >= 240 ) {
 			    return true;
 		    } else if (elapsedTime >= 120) {
 			    cpt += 1;
