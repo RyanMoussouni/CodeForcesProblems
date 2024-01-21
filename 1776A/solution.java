@@ -39,12 +39,12 @@ public class Solution {
 	System.out.println(hasBeenWalked(diffs));
     }
     
-    private static int readLines() {
+    private static int readLines() throws IOException {
 	    readln();
 	    return nextInt();
     }
 
-    private static List<Integer> readArray() {
+    private static List<Integer> readArray() throws IOException {
 	    readln();
 	    var nElts = nextInt();
 
