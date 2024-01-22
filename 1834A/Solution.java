@@ -79,7 +79,7 @@ public class Solution {
 	    }
 
 	    if (sum <= 0 && prod == -1 && -sum%2 == 1) {
-		    return sum;
+		    return -sum;
 	    }
 
 	    if (sum <= 0 && prod == -1 && sum%2 == 0) {
