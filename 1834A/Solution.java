@@ -78,7 +78,7 @@ public class Solution {
 		    return 0;
 	    }
 
-	    if (sum <= 0 && prod == -1 && sum%2 == 1) {
+	    if (sum <= 0 && prod == -1 && -sum%2 == 1) {
 		    return sum;
 	    }
 
@@ -90,9 +90,12 @@ public class Solution {
 		    return -sum;
 	    }
 
-	    if (sum <= 0 && prod == 1 && sum%2 == 1) {
+	    if (sum <= 0 && prod == 1 && -sum%2 == 1) {
 		    return -(sum+1);
 	    }
+	    System.out.println(sum);
+	    System.out.println(prod);
+	    System.out.println(sum%2);
 	    throw new RuntimeException();
     }
 }
