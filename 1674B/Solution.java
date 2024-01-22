@@ -71,6 +71,6 @@ public class Solution {
     }
 
     private static Integer getIdxFromDict(List<String> dict, String word) {
-	    return dict.indexOf(word);
+	    return dict.indexOf(word) + 1;
     }
 }
