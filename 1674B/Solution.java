@@ -39,7 +39,6 @@ public class Solution {
 
 	for (int i = 0; i<nLines; i++) {
 		var word = readWord();
-		System.out.println(word);
 		var idx = getIdxFromDict(dict, word);
 		System.out.println(idx);
 	}
@@ -59,8 +58,6 @@ public class Solution {
 				    sb.append(word2);
 
 				    var word = sb.toString();
-				    System.out.println(word);
-
 				    dict.add(word);
 			    }
 		    }
