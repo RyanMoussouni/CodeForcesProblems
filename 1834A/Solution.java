@@ -35,13 +35,14 @@ public class Solution {
 	readln();
 	var nLines = nextInt();
 
-	var arr = readArray();
-	var sum = computeSum(arr);
-	var prod = computeProd(arr);
+	for (int i=0; i<nLines; i++) {
+		var arr = readArray();
+		var sum = computeSum(arr);
+		var prod = computeProd(arr);
 
-	var nOp = computeNOperations(sum, prod);
-
-	System.out.println(nOp);
+		var nOp = computeNOperations(sum, prod);
+		System.out.println(nOp);
+	}
     }
 
     private static List<Integer> readArray() throws IOException {
