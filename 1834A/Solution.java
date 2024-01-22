@@ -93,9 +93,6 @@ public class Solution {
 	    if (sum <= 0 && prod == 1 && -sum%2 == 1) {
 		    return -(sum+1);
 	    }
-	    System.out.println(sum);
-	    System.out.println(prod);
-	    System.out.println(sum%2);
 	    throw new RuntimeException();
     }
 }
