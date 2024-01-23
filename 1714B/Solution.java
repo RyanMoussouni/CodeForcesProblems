@@ -67,7 +67,7 @@ public class Solution {
 	    for ( int i=n-1; i>=0; i-- ) {
 		    var elt = arr.get(i);
 		    if (hashTable.contains(elt)) {
-			    return i;
+			    return i+1;
 		    }
 		    hashTable.add(elt);
 	    }
