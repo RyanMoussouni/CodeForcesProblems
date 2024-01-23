@@ -50,30 +50,21 @@ public class Solution {
 	    var arrayLength = nextInt();
 
 	    readln();
-	    var crt = nextInt();
-	    int cpt;
 
-	    if ( crt == 0 ) {
-		    cpt = 1;
-	    } else {
-		    cpt = 0;
-	    }
-
+	    int cpt = 0;
 	    int max = cpt;
-
 	    for (int i=0; i<arrayLength-1; i++) {
 		    var newInt = nextInt();
 
-		    if ( crt == newInt && newInt == 0 ) {
+		    if ( newInt == 0 ) {
 			    cpt += 1;
 		    } else {
-			    cpt = 1;
+			    cpt = 0;
 		    }
 
-		    if (cpt > max) {
+		    if (max < cpt) {
 			    max = cpt;
 		    }
-		    crt = newInt;
 	    }
 
 	    return max;
