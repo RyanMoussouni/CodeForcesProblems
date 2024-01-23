@@ -40,7 +40,7 @@ public class Solution {
 	}
     }
 
-    private static Integer getNLines() {
+    private static Integer getNLines() throws IOException {
 	    readln();
 	    return nextInt();
     }
@@ -67,12 +67,13 @@ public class Solution {
 		    if ( crt == newInt && newInt == 0 ) {
 			    cpt += 1;
 		    } else {
-			    cpt = 0;
+			    cpt = 1;
 		    }
 
 		    if (cpt > max) {
 			    max = cpt;
 		    }
+		    crt = newInt;
 	    }
 
 	    return max;
