@@ -53,7 +53,7 @@ public class Solution {
 
 	    int cpt = 0;
 	    int max = cpt;
-	    for (int i=0; i<arrayLength-1; i++) {
+	    for (int i=0; i<arrayLength; i++) {
 		    var newInt = nextInt();
 
 		    if ( newInt == 0 ) {
