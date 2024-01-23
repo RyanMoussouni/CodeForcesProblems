@@ -69,6 +69,7 @@ public class Solution {
 		    if (hashTable.contains(elt)) {
 			    return n-i;
 		    }
+		    hashTable.add(elt);
 	    }
 
 	    return 0;
