@@ -35,11 +35,11 @@ public class Solution {
 	readln();
 	var nLines = nextInt();
 
-	readln();
-	var n = nextInt();
-	var q = nextInt();
 
 	for (int i = 0; i<nLines; i++) {
+	    readln();
+	    var n = nextInt();
+	    var q = nextInt();
 	    var prefixSum = computePrefixSum(n);
 
 	    for (int j=0; j<q; j++) {
