@@ -49,8 +49,8 @@ public class Solution {
 		    var k = nextInt();
 
 		    var csn = prefixSum.get(n-1);
-		    var csl = prefixSum.get(l);
-		    var csr = prefixSum.get(r); 
+		    var csl = prefixSum.get(l-1);
+		    var csr = prefixSum.get(r-1); 
 
 		    var isOdd = (csn - csr + csl + k*(r-l))%2 == 1;
 
