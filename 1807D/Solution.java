@@ -52,14 +52,14 @@ public class Solution {
 		    var csl = prefixSum.get(l);
 		    var csr = prefixSum.get(r); 
 
-		    var isOdd = csn - csr + csl + k*(r-l);
+		    var isOdd = (csn - csr + csl + k*(r-l))%2 == 1;
 
 		    System.out.println(isOdd);
 	    }
 	}
     }
 
-    private static List<Integer> computePrefixSum(Integer n) {
+    private static List<Integer> computePrefixSum(Integer n) throws IOException {
 	    readln();
 
 	    var arr = new ArrayList<Integer>();
