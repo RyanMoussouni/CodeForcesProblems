@@ -54,7 +54,11 @@ public class Solution {
 
 		    var isOdd = (csn - csr + csl + k*(r-l))%2 == 1;
 
-		    System.out.println(isOdd);
+		    if (isOdd) {
+			    System.out.println("YES");
+		    } else {
+			    System.out.println("NO");
+		    }
 	    }
 	}
     }
