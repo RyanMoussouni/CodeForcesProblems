@@ -48,8 +48,8 @@ public class Solution {
 		    var r = nextInt();
 		    var k = nextInt();
 
-		    var csn = prefixSum.get(n-1);
-		    var csl = prefixSum.get(l-1);
+		    var csn = prefixSum.get(n);
+		    var csl = prefixSum.get(l);
 		    var csr = prefixSum.get(r-1); 
 
 		    var isOdd = (csn - csr + csl + k*(r-l))%2 == 1;
@@ -68,6 +68,7 @@ public class Solution {
 
 	    var arr = new ArrayList<Integer>();
 	    var crt = 0;
+	    arr.add(crt);
 	    for (int i=0; i<n; i++) {
 		    crt += nextInt();
 		    arr.add(crt);
