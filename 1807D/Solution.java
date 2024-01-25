@@ -52,7 +52,8 @@ public class Solution {
 		    var csl = prefixSum.get(l);
 		    var csr = prefixSum.get(r-1); 
 
-		    var isOdd = (csn - csr + csl + k*(r-l))%2 == 1;
+		    var isOdd =(csn - csr + csl + k*(r-l))%2 == 1; 
+                    System.out.println(csn - csr + csl + k*(r-l));
 
 		    if (isOdd) {
 			    System.out.println("YES");
