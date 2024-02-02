@@ -48,9 +48,17 @@ public class Solution {
 		    var r = nextInt();
 		    var k = nextInt();
 
+		    System.out.println(l);
+		    System.out.println(r);
+		    System.out.println(k);
+
 		    var csn = prefixSum.get(n);
 		    var csl = prefixSum.get(l);
 		    var csr = prefixSum.get(r-1); 
+
+		    System.out.println(csn);
+		    System.out.println(csl);
+		    System.out.println(csr);
 
 		    var isOdd =(csn - csr + csl + k*(r-l))%2 == 1; 
                     System.out.println(csn - csr + csl + k*(r-l));
@@ -75,6 +83,7 @@ public class Solution {
 		    arr.add(crt);
 	    }
 
+	    System.out.println(arr);
 	    return arr;
     }
 }
