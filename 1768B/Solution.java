@@ -53,7 +53,7 @@ public class Solution {
 				crt += 1;
 			}
 		}
-		System.out.println(n-cpt);
+		System.out.println((n-cpt+k-1)/k);
 	}
     }
 
