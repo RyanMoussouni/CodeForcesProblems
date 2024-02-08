@@ -31,45 +31,45 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         Locale.setDefault(Locale.US);
         input = new BufferedReader(new InputStreamReader(System.in));
-	var nLines = readNLines();
 
-	for (int k=0; k<nLines; k++) {
-		var arr = readArray();
-		var isRed = false;
-		for (int i = 0; i < 8; i++) {
-			var isFullLine = true;
-			for (int j = 0; j < 8; j++) {
-				if (arr[i][j] == "B"
-				    || arr[i][j] == ".")
-						 {
-					isFullLine = false;
-				};
-			}
+	var nLines = readLines();
 
-			if (isFullLine) {
-				isRed = true;
-			}
+	for (int i = 0; i < nLines; i++) {
+		readln();
+	        var n = nextInt();
+
+		var nSwaps = getNSwaps(n);
+		var swaps = getSwaps(n);
+
+		System.out.println(nSwaps); 
+		
+		for (int j = 0; j < swaps.size(); j++) {
+			var swap = swaps.get(j);
+			System.out.println(swap);
 		}
-		System.out.println(isRed ? 'R' : 'B');
 	}
     }
 
-    private static Integer readNLines() throws IOException {
+    private static Integer readLines() throws IOException {
 	    readln();
 	    return nextInt();
     }
 
-    private static String[][] readArray() throws IOException {
-	    String[][] array = new String[8][8];
+    private static Integer getNSwaps(int n) {
+	    if (n%2 == 0) {
+		    return n/2;
+	    } else {
+		    return n/2 + 1;
+	    }
+    }
 
-	    readln();
-	    for (int i = 0; i<8; i++) {
-		    var line = readln();
-		    for (int j = 0; j < 8; j++) {
-			    array[i][j] =  String.valueOf(line.charAt(j));
-		    }
+    private static List<String> getSwaps(int n) {
+	    var swaps = new ArrayList<String>();
+
+	    for (int k = 0; k < n; k++) {
+		    swaps.add(String.format("%d %d", 3*k+1, 3*k+2));
 	    }
 
-	    return array;
+	    return swaps;
     }
 }
