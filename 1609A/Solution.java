@@ -1,0 +1,71 @@
+
+import java.io.*;
+import java.math.*;
+import java.util.*;
+
+public class Solution {
+    static BufferedReader input;
+    static StringTokenizer _stk;
+
+    static String readln() throws IOException {
+        String l = input.readLine();
+        if (l != null)
+            _stk = new StringTokenizer(l, " ");
+        return l;
+    }
+
+    static String next() {
+        return _stk.nextToken();
+    }
+
+    static int nextInt() {
+        return Integer.parseInt(next());
+    }
+
+    static void dbg(Object... o) {
+        System.out.println(Arrays.deepToString(o));
+    }
+
+    static PrintWriter output = new PrintWriter(new BufferedWriter(
+	new OutputStreamWriter(System.out)));
+
+    public static void main(String[] args) throws IOException {
+        Locale.setDefault(Locale.US);
+        input = new BufferedReader(new InputStreamReader(System.in));
+
+	readln();
+	var nLines = nextInt();
+
+	for (int i=0; i<nLines; i++) {
+		var arr = new ArrayList<Integer>();
+		var res = new ArrayList<Integer>();
+		readln();
+		var n = nextInt();
+
+		readln();
+		for (int j=0; j<n; j++) {
+			arr.add(nextInt());
+		}
+		var a_star = Collections.max(arr);
+		int cpt = 0;
+
+		for (int k=0; k<n; k++) {
+			var elt = arr.get(k);
+
+			while (elt%2 == 0 && elt != a_star) {
+				elt = elt / 2;
+				cpt +=1;
+			}
+			res.add(elt);
+		}
+
+		for (int l=0; l<n; l++) {
+			if (arr.get(l) == a_star) {
+				res.set(l, (((int)Math.pow(2, cpt))*a_star));
+			}
+		}
+
+		System.out.println(res.stream().mapToInt(Integer::intValue).sum());
+	}
+    }
+}
