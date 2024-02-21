@@ -42,7 +42,7 @@ public class Solution {
 
 		var y = n % 2020;
 
-		var isPossible = ((n-y*2021) % 2020) == 0;
+		var isPossible = (n-y*2021) > 0 && ((n-y*2021) % 2020) == 0;
 
 		if (isPossible) {
 			System.out.println("YES");
