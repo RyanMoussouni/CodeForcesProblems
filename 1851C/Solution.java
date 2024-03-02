@@ -59,12 +59,28 @@ public class Solution {
 			var nFirstColor = arr.stream()
 				.filter(clr -> clr==arr.get(0))
 				.count();
-			var nSecondColor = arr.stream()
-				.filter(clr -> clr==arr.get(n-1))
-				.count();
 
-			var message = nFirstColor >= k && nSecondColor >= k ? "YES" : "NO"; 
-			System.out.println(message);
+			int ic=-1;
+			int cpt=0;
+			for (int j=0; j<n; j++) {
+				if (arr.get(j) == arr.get(0)) {
+					cpt += 1;
+				}
+				if (cpt == k) {
+					ic = j;
+				}
+			}
+
+			if (nFirstColor >=k) {
+				var nSecondColor = arr.subList(ic, n-1).stream()
+					.filter(clr -> clr == arr.get(n-1))
+					.count();
+				var message = nSecondColor >= k ? "YES" : "NO";  
+				System.out.println(message);
+			} else {
+				var message = "NO";
+				System.out.println(message);
+			}
 		}
 	}
     }
