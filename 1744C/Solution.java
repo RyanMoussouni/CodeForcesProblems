@@ -36,14 +36,13 @@ public class Solution {
 	var nLines = nextInt();
 
 	for (int i=0; i<nLines; i++) {
-		readln();
+		var line = readln();
 		var n = nextInt();
-		var c = next();
-		System.out.println(c);
 
+		var c = line.charAt(2);
 		var lights = readln();
 
-		if (c == "r") {
+		if (c == 'r') {
 			var timeToGreen = new int[lights.length()];
 
 			int cpt=0;
@@ -67,15 +66,14 @@ public class Solution {
 					cpt += 1;
 				}
 			}
-			System.out.println("Hello World");
 			System.out.println(Arrays.stream(timeToGreen).min().getAsInt());
 		}
 
-		if (c == "g") {
+		if (c == 'g') {
 			System.out.println(0);
 		}
 
-		if (c == "y") {
+		if (c == 'y') {
 			var timeToGreen = new int[lights.length()];
 
 			int cpt=0;
