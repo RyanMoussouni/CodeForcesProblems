@@ -39,6 +39,7 @@ public class Solution {
 		readln();
 		var n = nextInt();
 		var c = next();
+		System.out.println(c);
 
 		var lights = readln();
 
@@ -66,6 +67,7 @@ public class Solution {
 					cpt += 1;
 				}
 			}
+			System.out.println("Hello World");
 			System.out.println(Arrays.stream(timeToGreen).min().getAsInt());
 		}
 
