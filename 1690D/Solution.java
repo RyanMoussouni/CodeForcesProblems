@@ -46,6 +46,7 @@ public class Solution {
 		for (int m=0; m<str.length()-k; m++) {
 			var sub = str.substring(m, m+k);
 			cnt = Math.min(cnt, (int) sub.chars().filter(ch -> ch=='W').count());
+			System.out.println(String.format("%i %i %s", k, cnt, sub));
 		}
 		System.out.println(cnt);
 	}
