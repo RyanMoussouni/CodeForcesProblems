@@ -43,10 +43,10 @@ public class Solution {
 		var str = readln();
 
 		int cnt = str.length();
-		for (int m=0; m<str.length()-k; m++) {
-			var sub = str.substring(m, m+k);
+		for (int m=0; m<str.length()-k+1; m++) {
+			var sub = str.substring(m, m+k+1);
 			cnt = Math.min(cnt, (int) sub.chars().filter(ch -> ch=='W').count());
-			System.out.println(String.format("%i %i %s", k, cnt, sub));
+			System.out.println(String.format("%d %d %s", k, cnt, sub));
 		}
 		System.out.println(cnt);
 	}
