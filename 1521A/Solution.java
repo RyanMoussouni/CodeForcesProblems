@@ -42,7 +42,7 @@ public class Solution {
 
 		if (b!=1) {
 			System.out.println("YES");
-			System.out.println(String.format("%d %d %d", a*b, a, (1+b)*a));
+			System.out.println(String.format("%d %d %d", (long) a*b, (long) a, (long) (1+b)*a));
 		} else {
 			System.out.println("NO");
 		}
