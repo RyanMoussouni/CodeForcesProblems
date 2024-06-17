@@ -32,8 +32,11 @@ public class Solution {
         Locale.setDefault(Locale.US);
         input = new BufferedReader(new InputStreamReader(System.in));
 
+	readln();
+	var m = nextInt();
+
 	var line = readln();
-	var m = line.length();
+
 	var found = false;
 	int index = m-1;
 	for (int j=0; j<m-1; j++) {
@@ -42,7 +45,7 @@ public class Solution {
 		}
 	}
 	var sb = new StringBuilder();
-	for (int j=0; j<m-1; j++) {
+	for (int j=0; j<m; j++) {
 		if (j != index) {
 			sb.append(line.charAt(j));
 		}
